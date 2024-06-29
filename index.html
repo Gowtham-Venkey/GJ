@@ -4,12 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My GitHub Page</title>
-  <link rel="stylesheet" href="styles.css">
-  <style type="text/css">
-    </style>
   <style>
-    .love {
-      margin-top: 100px;
+    h2 {
+      height: 30px;
+      width: 520px;
+      background-color: yellow;
+      border-radius: 20%;
+      opacity: 0.5;
+    }
+
+    summary {
+      border: 1px solid black;
+      width: 250px;
+      height: 40px;
+      border-radius: 90%;
+      font-size: 30px;
+      background: black;
+      color: Crimson;
+      margin-top: 10px;
+      margin-left: 10px;
+      font-family: 'Arial';
+      text-align: center;
+    }
+
+    .note {
+      width: 95%;
+      height: 150vh;
+      border-radius: 5%;
+      background-color: lavender;
+      opacity: 0.5;
+      color: #000;
+      margin: 0;
+      overflow: scroll;
+      margin-left: 30px;
+    }
+
+    .love-heart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .love-heart:before, #switch {
+      display: none;
+    }
+
+    .love-heart, .love-heart::after {
+      border-color: hsl(231deg 28% 86%);
+      border: 1px solid;
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      width: 10px;
+      height: 8px;
+      border-bottom: 0;
+    }
+
+    .round {
+      position: absolute;
+      z-index: 1;
+      width: 8px;
+      height: 8px;
+      background: hsl(0deg 0% 100%);
+      box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+      border-radius: 100%;
+      left: 0px;
+      bottom: -1px;
+      transition: all .5s ease;
+      animation: check-animation2 .5s forwards;
+    }
+
+    input:checked + label .round {
+      transform: translate(0px, 0px);
+      animation: check-animation .5s forwards;
+      background-color: hsl(0deg 0% 100%);
+    }
+
+    @keyframes check-animation {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      50% {
+        transform: translate(0px, 7px);
+      }
+      100% {
+        transform: translate(7px, 7px);
+      }
+    }
+
+    @keyframes check-animation2 {
+      0% {
+        transform: translate(7px, 7px);
+      }
+      50% {
+        transform: translate(0px, 7px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+
+    .love-heart {
+      box-sizing: border-box;
+      position: relative;
+      transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+      display: block;
+      border-color: hsl(231deg 28% 86%);
+      cursor: pointer;
+      top: 0;
+    }
+
+    input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
+      border-color: hsl(347deg 81% 61%);
+      box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+    }
+
+    .love-heart::after, .love-heart .bottom {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+      border-color: hsl(231deg 28% 86%);
+    }
+
+    .love-heart::after {
+      right: -9px;
+      transform: rotate(90deg);
+      top: 7px;
+    }
+
+    .love-heart .bottom {
+      width: 11px;
+      height: 11px;
+      border-left: 1px solid;
+      border-bottom: 1px solid;
+      border-color: hsl(231deg 28% 86%);
+      left: -1px;
+      top: 5px;
+      border-radius: 0px 0px 0px 5px;
+    }
+
+    body {
+      background-attachment: scroll;
+      height: 100vh;
+      margin: 0;
+      animation: backgroundSlideshow 40s infinite;
+    }
+
+    @keyframes backgroundSlideshow {
+      5% { background-image: url('https://i.pinimg.com/736x/ac/81/8a/ac818aeb90d5d4ae257e57e5f0abc797.jpg'); }
+      14% { background-image: url('https://www.pinkvilla.com/pics/480x270/sita_ramam_1_main_202209.jpg'); }
+      28% { background-image: url('https://i.pinimg.com/736x/80/02/b8/8002b8c425433aea3b939065d1c92b42.jpg'); }
+      42% { background-image: url('https://www.comingsoon.net/wp-content/uploads/sites/3/2024/05/Untitled-design-2024-05-01T113226.817.jpg?w=1024'); }
+      56% { background-image: url('https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-92491435/92491435.jpg'); }
+      70% { background-image: url('https://w0.peakpx.com/wallpaper/932/366/HD-wallpaper-sita-ramam-stills-sitaramam-movie-stills-doing-the-rounds-on-social-media-dulquer-salmaan-on.jpg');}
+      84% { background-image: url('https://i.ytimg.com/vi/DaeVv_Fui40/sddefault.jpg'); }
+      100% { background-image: url('https://images.news18.com/ibnlive/uploads/2022/09/sita-ramam-1.jpg'); } 
     }
   </style>
 </head>
