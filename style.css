@@ -5,6 +5,7 @@ h2 {
   border-radius: 20%;
   opacity: 0.5;
 }
+
 summary {
   border: 1px solid black;
   width: 250px;
@@ -18,6 +19,7 @@ summary {
   font-family: 'Arial';
   text-align: center;
 }
+
 .note {
   width: 95%;
   height: 150vh;
@@ -29,13 +31,16 @@ summary {
   overflow: scroll;
   margin-left: 30px;
 }
+
 .love-heart {
   align: center;
 }
+
 .love-heart:before, #switch {
   display: none;
   place-items: center;
 }
+
 .love-heart, .love-heart::after {
   border-color: hsl(231deg 28% 86%);
   border: 1px solid;
@@ -45,6 +50,7 @@ summary {
   height: 8px;
   border-bottom: 0;
 }
+
 .round {
   position: absolute;
   z-index: 1;
@@ -58,11 +64,13 @@ summary {
   transition: all .5s ease;
   animation: check-animation2 .5s forwards;
 }
+
 input:checked + label .round {
   transform: translate(0px, 0px);
   animation: check-animation .5s forwards;
   background-color: hsl(0deg 0% 100%);
 }
+
 @keyframes check-animation {
   0% {
     transform: translate(0px, 0px);
@@ -74,6 +82,7 @@ input:checked + label .round {
     transform: translate(7px, 7px);
   }
 }
+
 @keyframes check-animation2 {
   0% {
     transform: translate(7px, 7px);
@@ -85,6 +94,7 @@ input:checked + label .round {
     transform: translate(0px, 0px);
   }
 }
+
 .love-heart {
   box-sizing: border-box;
   position: relative;
@@ -94,10 +104,12 @@ input:checked + label .round {
   cursor: pointer;
   top: 0;
 }
+
 input:checked + .love-heart, input:checked + .love-heart::after, input:checked + .love-heart .bottom {
   border-color: hsl(347deg 81% 61%);
   box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
 }
+
 .love-heart::after, .love-heart .bottom {
   content: "";
   display: block;
@@ -105,11 +117,13 @@ input:checked + .love-heart, input:checked + .love-heart::after, input:checked +
   position: absolute;
   border-color: hsl(231deg 28% 86%);
 }
+
 .love-heart::after {
   right: -9px;
   transform: rotate(90deg);
   top: 7px;
 }
+
 .love-heart .bottom {
   width: 11px;
   height: 11px;
@@ -120,14 +134,14 @@ input:checked + .love-heart, input:checked + .love-heart::after, input:checked +
   top: 5px;
   border-radius: 0px 0px 0px 5px;
 }
+
 body {
   background-attachment: scroll;
-}
-body {
   height: 100vh;
   margin: 0;
   animation: backgroundSlideshow 40s infinite;
 }
+
 @keyframes backgroundSlideshow {
   5% { background-image: url('https://i.pinimg.com/736x/ac/81/8a/ac818aeb90d5d4ae257e57e5f0abc797.jpg'); }
   14% { background-image: url('https://www.pinkvilla.com/pics/480x270/sita_ramam_1_main_202209.jpg'); }
